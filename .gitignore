@@ -1,3 +1,7 @@
 bin*
 log*
 lib*
+target/
+.settings/
+*.classpath
+*.project
