@@ -4,6 +4,11 @@
   <artifactId>all-maker-Info</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
+  
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+    
   <modules>
   	<module>parent</module>
   	<module>base</module>
@@ -31,6 +36,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
+					<forceJavacCompilerUse>true</forceJavacCompilerUse>
 				</configuration>
 			</plugin>
 		</plugins>
