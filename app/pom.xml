@@ -45,9 +45,32 @@
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-        <groupId>com.fuquanzhen.info</groupId>
-        <artifactId>elective-maker</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </dependency>
+			<groupId>com.fuquanzhen.info</groupId>
+			<artifactId>elective-maker</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>3.1.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<createDependencyReducedPom>false</createDependencyReducedPom>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
